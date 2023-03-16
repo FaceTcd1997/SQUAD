@@ -1,0 +1,55 @@
+League of Legends API:
+
+    USE THIS TO GET SUMMONERID FROM SUMMONER NAME
+    SUMMONER-V4
+    /lol/summoner/v4/summoners/by-name/{summonerName}
+
+    Response example:
+        {
+            "id": "TBre__DSaEPqiHPdajfIA3TO1HzvE3eOtwOXKEzNtZe5Pk8",
+            "accountId": "8RCLCXmyCvTUyOCAc3R0ygSj2jcWHEdTs7ON0hTYbZQ2RlI",
+            "puuid": "4Jpjmp6tIdJSLgsjs_aKcnA7sZmS9aKkG3AxzGyWIQ3L4QSke231V-Cb93ojcEpwheyz_WL_JZKKsA",
+            "name": "Feiz to Feiz",
+            "profileIconId": 5638,
+            "revisionDate": 1678228119000,
+            "summonerLevel": 664
+        }
+
+
+    USE THIS TO RETRIEVE RANK OF A PLAYER
+    LEAGUE-V4
+    /lol/league/v4/entries/by-summoner/{encryptedSummonerId}
+
+    Response example:
+        [
+            {
+                "leagueId": "665e7ac4-cd16-4025-8049-bf6c9217ae9a",
+                "queueType": "RANKED_FLEX_SR",
+                "tier": "PLATINUM",
+                "rank": "IV",
+                "summonerId": "TBre__DSaEPqiHPdajfIA3TO1HzvE3eOtwOXKEzNtZe5Pk8",
+                "summonerName": "Feiz to Feiz",
+                "leaguePoints": 44,
+                "wins": 21,
+                "losses": 22,
+                "veteran": false,
+                "inactive": false,
+                "freshBlood": false,
+                "hotStreak": false
+            },
+            {
+                "leagueId": "b0d86f15-7497-42a4-82c5-172e5625ddd9",
+                "queueType": "RANKED_SOLO_5x5",
+                "tier": "GOLD",
+                "rank": "IV",
+                "summonerId": "TBre__DSaEPqiHPdajfIA3TO1HzvE3eOtwOXKEzNtZe5Pk8",
+                "summonerName": "Feiz to Feiz",
+                "leaguePoints": 40,
+                "wins": 40,
+                "losses": 35,
+                "veteran": false,
+                "inactive": false,
+                "freshBlood": false,
+                "hotStreak": false
+            }
+        ]
