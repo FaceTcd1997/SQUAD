@@ -53,3 +53,40 @@ League of Legends API:
                 "hotStreak": false
             }
         ]
+
+    USED TO RETRIEVE THE MOST CONFIDENT HEROES PLAYED
+    CHAMPION-MASTERY-V4
+    /lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}
+
+    The championId is the field key in champion.json
+
+    Response Example
+    [
+        {
+            "championId": 51,
+            "championLevel": 7,
+            "championPoints": 362496,
+            "lastPlayTime": 1676413662000,
+            "championPointsSinceLastLevel": 340896,
+            "championPointsUntilNextLevel": 0,
+            "chestGranted": false,
+            "tokensEarned": 0,
+            "summonerId": "TBre__DSaEPqiHPdajfIA3TO1HzvE3eOtwOXKEzNtZe5Pk8"
+        },
+        {
+            "championId": 99,
+            "championLevel": 7,
+            "championPoints": 245249,
+            "lastPlayTime": 1676319174000,
+            "championPointsSinceLastLevel": 223649,
+            "championPointsUntilNextLevel": 0,
+            "chestGranted": false,
+            "tokensEarned": 0,
+            "summonerId": "TBre__DSaEPqiHPdajfIA3TO1HzvE3eOtwOXKEzNtZe5Pk8"
+        },
+        .
+        .
+        .
+    ]
+
+
