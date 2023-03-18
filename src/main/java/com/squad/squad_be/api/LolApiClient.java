@@ -1,4 +1,4 @@
-package com.squad.squad_be;
+package com.squad.squad_be.api;
 
 import com.squad.squad_be.dto.Account;
 import org.springframework.beans.factory.annotation.Value;

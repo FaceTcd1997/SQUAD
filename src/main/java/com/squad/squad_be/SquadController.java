@@ -1,5 +1,6 @@
 package com.squad.squad_be;
 
+import com.squad.squad_be.api.LolApiClient;
 import com.squad.squad_be.dto.Account;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
