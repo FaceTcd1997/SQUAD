@@ -7,5 +7,7 @@ Adaptive applications are able to learn from user interactions, and use this inf
 A few statistics retrieved from League Of Legends API will be integrated with personality traits in order to model users and to suggest a list of the best suitable users to play with based on machine learning prediction upon both LOL info (such as ELO) and personalities.
 
 Learn more:
+
 -League of Legends DEV portal: https://developer.riotgames.com/
+
 -Big 5 Personality Traits: https://en.wikipedia.org/wiki/Big_Five_personality_traits
