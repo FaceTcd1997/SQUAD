@@ -1,11 +1,10 @@
 package com.squad.squad_be.dto;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Account {
     public String id;
     public String accountId;
     public String puuid;
+
     public String name;
     public String profileIconId;
     public String revisionDate;
