@@ -1,30 +1,31 @@
 package com.squad.squad_be.dto;
 
-import java.util.Arrays;
+import com.squad.squad_be.dto.enums.Role;
 
 public class User {
     private String email;
     private String name;
-    private String schedule;
+    private Integer schedule_start;
+    private Integer schedule_end;
     private Traits traits;
     private Account account;
     private GameStats stats;
     private Role role;
-
-    private User[] matching;
+    private Integer group;
 
     public User() {
     }
 
-    public User(String email, String name, String schedule, Traits traits, Account account, GameStats stats, Role role, User[] matching) {
+    public User(String email, String name, Integer schedule_start, Integer schedule_end, Traits traits, Account account, GameStats stats, Role role, Integer group) {
         this.email = email;
         this.name = name;
-        this.schedule = schedule;
+        this.schedule_start = schedule_start;
+        this.schedule_end = schedule_end;
         this.traits = traits;
         this.account = account;
         this.stats = stats;
         this.role = role;
-        this.matching = matching;
+        this.group = group;
     }
 
     public String getEmail() {
@@ -43,12 +44,20 @@ public class User {
         this.name = name;
     }
 
-    public String getSchedule() {
-        return schedule;
+    public Integer getSchedule_start() {
+        return schedule_start;
     }
 
-    public void setSchedule(String schedule) {
-        this.schedule = schedule;
+    public void setSchedule_start(Integer schedule_start) {
+        this.schedule_start = schedule_start;
+    }
+
+    public Integer getSchedule_end() {
+        return schedule_end;
+    }
+
+    public void setSchedule_end(Integer schedule_end) {
+        this.schedule_end = schedule_end;
     }
 
     public Traits getTraits() {
@@ -83,12 +92,12 @@ public class User {
         this.role = role;
     }
 
-    public User[] getMatching() {
-        return matching;
+    public Integer getGroup() {
+        return group;
     }
 
-    public void setMatching(User[] matching) {
-        this.matching = matching;
+    public void setGroup(Integer group) {
+        this.group = group;
     }
 
     @Override
@@ -96,12 +105,13 @@ public class User {
         return "User{" +
                 "email='" + email + '\'' +
                 ", name='" + name + '\'' +
-                ", schedule='" + schedule + '\'' +
+                ", schedule_start=" + schedule_start +
+                ", schedule_end=" + schedule_end +
                 ", traits=" + traits +
                 ", account=" + account +
                 ", stats=" + stats +
                 ", role=" + role +
-                ", matching=" + Arrays.toString(matching) +
+                ", matching=" + group +
                 '}';
     }
 }

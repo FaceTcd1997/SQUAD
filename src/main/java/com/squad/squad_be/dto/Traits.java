@@ -1,16 +1,16 @@
 package com.squad.squad_be.dto;
 
 public class Traits {
-    private Float extraversion;
-    private Float agreeableness;
-    private Float conscientiousness;
-    private Float neuroticism;
-    private Float openness;
+    private Integer extraversion;
+    private Integer agreeableness;
+    private Integer conscientiousness;
+    private Integer neuroticism;
+    private Integer openness;
 
     public Traits() {
     }
 
-    public Traits(Float extraversion, Float agreeableness, Float conscientiousness, Float neuroticism, Float openness) {
+    public Traits(Integer extraversion, Integer agreeableness, Integer conscientiousness, Integer neuroticism, Integer openness) {
         this.extraversion = extraversion;
         this.agreeableness = agreeableness;
         this.conscientiousness = conscientiousness;
@@ -18,43 +18,43 @@ public class Traits {
         this.openness = openness;
     }
 
-    public Float getExtraversion() {
+    public Integer getExtraversion() {
         return extraversion;
     }
 
-    public void setExtraversion(Float extraversion) {
+    public void setExtraversion(Integer extraversion) {
         this.extraversion = extraversion;
     }
 
-    public Float getAgreeableness() {
+    public Integer getAgreeableness() {
         return agreeableness;
     }
 
-    public void setAgreeableness(Float agreeableness) {
+    public void setAgreeableness(Integer agreeableness) {
         this.agreeableness = agreeableness;
     }
 
-    public Float getConscientiousness() {
+    public Integer getConscientiousness() {
         return conscientiousness;
     }
 
-    public void setConscientiousness(Float conscientiousness) {
+    public void setConscientiousness(Integer conscientiousness) {
         this.conscientiousness = conscientiousness;
     }
 
-    public Float getNeuroticism() {
+    public Integer getNeuroticism() {
         return neuroticism;
     }
 
-    public void setNeuroticism(Float neuroticism) {
+    public void setNeuroticism(Integer neuroticism) {
         this.neuroticism = neuroticism;
     }
 
-    public Float getOpenness() {
+    public Integer getOpenness() {
         return openness;
     }
 
-    public void setOpenness(Float openness) {
+    public void setOpenness(Integer openness) {
         this.openness = openness;
     }
 

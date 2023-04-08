@@ -7,8 +7,6 @@ import com.squad.squad_be.service.MLService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-
 @Component
 public class FeaturesComponent {
 
@@ -21,7 +19,7 @@ public class FeaturesComponent {
     @Autowired
     private MLService mlService;
 
-    public User registerUserFeature(User user) throws IOException {
+    public User registerUserFeature(User user) throws Exception {
         //Retrieve account information from summoner name
         user.setAccount(lolService.retrieveLolAccount(user.getAccount().getName()));
         //Retrieve game stats from account id
@@ -29,7 +27,17 @@ public class FeaturesComponent {
         //Retrieve matching players
         //TODO
         //Store the user in the dataset
-        datasetService.write(user, "./src/dataset.csv");
+        //Check user //TODO
+        datasetService.addUser(user);
         return  user;
     }
+
+    public void clusterize() throws Exception{
+        mlService.clusterize();
+    }
+
+    public void fillDataset() throws Exception {
+        datasetService.fillValues();
+    }
+
 }

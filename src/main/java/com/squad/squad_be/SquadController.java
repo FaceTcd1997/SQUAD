@@ -17,7 +17,9 @@ public class SquadController {
     private FeaturesComponent features;
 
     @GetMapping("/")
-    public String sayHello(){
+    public String sayHello() throws Exception {
+        //features.fillDataset();
+        //features.clusterize();
         return "Hello World!";
     }
 

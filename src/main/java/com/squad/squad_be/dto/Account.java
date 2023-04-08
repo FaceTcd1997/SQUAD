@@ -8,9 +8,9 @@ public class Account {
     public String name;
     public String profileIconId;
     public String revisionDate;
-    public String summonerLevel;
+    public Integer summonerLevel;
 
-    public Account(String id, String accountId, String puuid, String name, String profileIconId, String revisionDate, String summonerLevel) {
+    public Account(String id, String accountId, String puuid, String name, String profileIconId, String revisionDate, Integer summonerLevel) {
         this.id = id;
         this.accountId = accountId;
         this.puuid = puuid;
@@ -71,11 +71,11 @@ public class Account {
         this.revisionDate = revisionDate;
     }
 
-    public String getSummonerLevel() {
+    public Integer getSummonerLevel() {
         return summonerLevel;
     }
 
-    public void setSummonerLevel(String summonerLevel) {
+    public void setSummonerLevel(Integer summonerLevel) {
         this.summonerLevel = summonerLevel;
     }
 

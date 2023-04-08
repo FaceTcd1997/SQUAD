@@ -1,10 +1,14 @@
 package com.squad.squad_be.dto;
 
+import com.squad.squad_be.dto.enums.Queue;
+import com.squad.squad_be.dto.enums.Rank;
+import com.squad.squad_be.dto.enums.Tier;
+
 public class QueueStat {
     private String leagueId;
     private Queue queueType;
-    private String tier;
-    private String rank;
+    private Tier tier;
+    private Rank rank;
     private String summonerId;
     private String summonerName;
     private int leaguePoints;
@@ -18,7 +22,7 @@ public class QueueStat {
     public QueueStat() {
     }
 
-    public QueueStat(String leagueId, Queue queueType, String tier, String rank, String summonerId, String summonerName, int leaguePoints, int wins, int losses, boolean veteran, boolean inactive, boolean freshBlood, boolean hotStreak) {
+    public QueueStat(String leagueId, Queue queueType, Tier tier, Rank rank, String summonerId, String summonerName, int leaguePoints, int wins, int losses, boolean veteran, boolean inactive, boolean freshBlood, boolean hotStreak) {
         this.leagueId = leagueId;
         this.queueType = queueType;
         this.tier = tier;
@@ -50,19 +54,19 @@ public class QueueStat {
         this.queueType = queueType;
     }
 
-    public String getTier() {
+    public Tier getTier() {
         return tier;
     }
 
-    public void setTier(String tier) {
+    public void setTier(Tier tier) {
         this.tier = tier;
     }
 
-    public String getRank() {
+    public Rank getRank() {
         return rank;
     }
 
-    public void setRank(String rank) {
+    public void setRank(Rank rank) {
         this.rank = rank;
     }
 
