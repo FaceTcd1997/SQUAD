@@ -18,20 +18,19 @@ public class SquadController {
 
     @GetMapping("/")
     public String sayHello() throws Exception {
-        //features.fillDataset();
-        //features.clusterize();
+        features.fillDataset();
         return "Hello World!";
     }
 
     @PostMapping("/register-user")
     public ResponseEntity<User> registerUser(@RequestBody User user) throws Exception {
         logger.info("SQUAD - Received registration request for: " + user.toString());
-        User response = features.registerUserFeature(user);
+        User response = features.registerUser(user);
         logger.info("SQUAD - Sending response: " + response.toString());
         return ResponseEntity.ok().body(response);
     }
 
-    @PostMapping("/retrieve-new-matches")
+    @PostMapping("/find-new-matches")
     public String retrieveNewMatches(@PathVariable User user) throws Exception {
         return null;
     }

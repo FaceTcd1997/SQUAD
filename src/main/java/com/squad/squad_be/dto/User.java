@@ -2,6 +2,8 @@ package com.squad.squad_be.dto;
 
 import com.squad.squad_be.dto.enums.Role;
 
+import java.util.Arrays;
+
 public class User {
     private String email;
     private String name;
@@ -11,12 +13,12 @@ public class User {
     private Account account;
     private GameStats stats;
     private Role role;
-    private Integer group;
+    private User[] matches;
 
     public User() {
     }
 
-    public User(String email, String name, Integer schedule_start, Integer schedule_end, Traits traits, Account account, GameStats stats, Role role, Integer group) {
+    public User(String email, String name, Integer schedule_start, Integer schedule_end, Traits traits, Account account, GameStats stats, Role role, User[] group) {
         this.email = email;
         this.name = name;
         this.schedule_start = schedule_start;
@@ -25,7 +27,7 @@ public class User {
         this.account = account;
         this.stats = stats;
         this.role = role;
-        this.group = group;
+        this.matches = group;
     }
 
     public String getEmail() {
@@ -92,12 +94,12 @@ public class User {
         this.role = role;
     }
 
-    public Integer getGroup() {
-        return group;
+    public User[] getMatches() {
+        return matches;
     }
 
-    public void setGroup(Integer group) {
-        this.group = group;
+    public void setMatches(User[] matches) {
+        this.matches = matches;
     }
 
     @Override
@@ -111,7 +113,7 @@ public class User {
                 ", account=" + account +
                 ", stats=" + stats +
                 ", role=" + role +
-                ", matching=" + group +
+                ", group=" + Arrays.toString(matches) +
                 '}';
     }
 }

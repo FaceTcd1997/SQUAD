@@ -1,16 +1,16 @@
 package com.squad.squad_be.dto;
 
 public class Traits {
-    private Integer extraversion;
-    private Integer agreeableness;
-    private Integer conscientiousness;
-    private Integer neuroticism;
-    private Integer openness;
+    private Double agreeableness;
+    private Double conscientiousness;
+    private Double extraversion;
+    private Double neuroticism;
+    private Double openness;
 
     public Traits() {
     }
 
-    public Traits(Integer extraversion, Integer agreeableness, Integer conscientiousness, Integer neuroticism, Integer openness) {
+    public Traits(Double extraversion, Double agreeableness, Double conscientiousness, Double neuroticism, Double openness) {
         this.extraversion = extraversion;
         this.agreeableness = agreeableness;
         this.conscientiousness = conscientiousness;
@@ -18,52 +18,52 @@ public class Traits {
         this.openness = openness;
     }
 
-    public Integer getExtraversion() {
-        return extraversion;
-    }
-
-    public void setExtraversion(Integer extraversion) {
-        this.extraversion = extraversion;
-    }
-
-    public Integer getAgreeableness() {
+    public Double getAgreeableness() {
         return agreeableness;
     }
 
-    public void setAgreeableness(Integer agreeableness) {
+    public void setAgreeableness(Double agreeableness) {
         this.agreeableness = agreeableness;
     }
 
-    public Integer getConscientiousness() {
+    public Double getConscientiousness() {
         return conscientiousness;
     }
 
-    public void setConscientiousness(Integer conscientiousness) {
+    public void setConscientiousness(Double conscientiousness) {
         this.conscientiousness = conscientiousness;
     }
 
-    public Integer getNeuroticism() {
+    public Double getExtraversion() {
+        return extraversion;
+    }
+
+    public void setExtraversion(Double extraversion) {
+        this.extraversion = extraversion;
+    }
+
+    public Double getNeuroticism() {
         return neuroticism;
     }
 
-    public void setNeuroticism(Integer neuroticism) {
+    public void setNeuroticism(Double neuroticism) {
         this.neuroticism = neuroticism;
     }
 
-    public Integer getOpenness() {
+    public Double getOpenness() {
         return openness;
     }
 
-    public void setOpenness(Integer openness) {
+    public void setOpenness(Double openness) {
         this.openness = openness;
     }
 
     @Override
     public String toString() {
         return "Traits{" +
-                "extraversion=" + extraversion +
-                ", agreeableness=" + agreeableness +
+                "agreeableness=" + agreeableness +
                 ", conscientiousness=" + conscientiousness +
+                ", extraversion=" + extraversion +
                 ", neuroticism=" + neuroticism +
                 ", openness=" + openness +
                 '}';

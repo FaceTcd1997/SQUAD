@@ -14,15 +14,15 @@ public class QueueStat {
     private int leaguePoints;
     private int wins;
     private int losses;
-    private boolean veteran;
-    private boolean inactive;
-    private boolean freshBlood;
-    private boolean hotStreak;
+    private Boolean veteran;
+    private Boolean inactive;
+    private Boolean freshBlood;
+    private Boolean hotStreak;
 
     public QueueStat() {
     }
 
-    public QueueStat(String leagueId, Queue queueType, Tier tier, Rank rank, String summonerId, String summonerName, int leaguePoints, int wins, int losses, boolean veteran, boolean inactive, boolean freshBlood, boolean hotStreak) {
+    public QueueStat(String leagueId, Queue queueType, Tier tier, Rank rank, String summonerId, String summonerName, int leaguePoints, int wins, int losses, Boolean veteran, Boolean inactive, Boolean freshBlood, Boolean hotStreak) {
         this.leagueId = leagueId;
         this.queueType = queueType;
         this.tier = tier;
@@ -110,35 +110,35 @@ public class QueueStat {
         this.losses = losses;
     }
 
-    public boolean isVeteran() {
+    public Boolean isVeteran() {
         return veteran;
     }
 
-    public void setVeteran(boolean veteran) {
+    public void setVeteran(Boolean veteran) {
         this.veteran = veteran;
     }
 
-    public boolean isInactive() {
+    public Boolean isInactive() {
         return inactive;
     }
 
-    public void setInactive(boolean inactive) {
+    public void setInactive(Boolean inactive) {
         this.inactive = inactive;
     }
 
-    public boolean isFreshBlood() {
+    public Boolean isFreshBlood() {
         return freshBlood;
     }
 
-    public void setFreshBlood(boolean freshBlood) {
+    public void setFreshBlood(Boolean freshBlood) {
         this.freshBlood = freshBlood;
     }
 
-    public boolean isHotStreak() {
+    public Boolean isHotStreak() {
         return hotStreak;
     }
 
-    public void setHotStreak(boolean hotStreak) {
+    public void setHotStreak(Boolean hotStreak) {
         this.hotStreak = hotStreak;
     }
 

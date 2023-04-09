@@ -21,11 +21,16 @@ public class MLService {
         CSVLoader loader = new CSVLoader();
         loader.setSource(new File("./src/main/dataset/lol_b5p.csv"));
         Instances data = loader.getDataSet();
-        data.deleteAttributeAt(0);
-        data.deleteAttributeAt(0);
-        data.deleteAttributeAt(0);
-        data.deleteAttributeAt(0);
-        //data.deleteAttributeAt(14);
+
+        data.deleteAttributeAt(12); //Remove Role
+        data.deleteAttributeAt(10); //Remove Tier
+        data.deleteAttributeAt(9); //Remove Rank
+        data.deleteAttributeAt(6); //Remove Losses
+        data.deleteAttributeAt(5); //Remove Wins
+        data.deleteAttributeAt(0); //Remove AccountID
+        data.deleteAttributeAt(0); //Remove Account name
+        data.deleteAttributeAt(0); //Remove Email
+        data.deleteAttributeAt(0); //Remove Name
 
         // Create a new attribute for the cluster information
         Attribute clusterAttribute = new Attribute("CLUSTER");
