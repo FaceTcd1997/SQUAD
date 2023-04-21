@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class LolApiClient {
+public class LolApi {
 
     private static final String API_BASE_URL = "https://euw1.api.riotgames.com/lol";
 
@@ -19,7 +19,7 @@ public class LolApiClient {
 
     private final RestTemplate restTemplate;
 
-    public LolApiClient(RestTemplateBuilder restTemplateBuilder) {
+    public LolApi(RestTemplateBuilder restTemplateBuilder) {
         this.restTemplate = restTemplateBuilder.build();
     }
 

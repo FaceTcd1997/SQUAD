@@ -1,5 +1,9 @@
 package com.squad.squad_be.service;
 
+import com.squad.squad_be.api.MlApi;
+import com.squad.squad_be.dto.ml.Teams;
+import com.squad.squad_be.dto.ml.UserEntry;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import weka.clusterers.SimpleKMeans;
 import weka.core.Attribute;
@@ -10,6 +14,25 @@ import java.io.File;
 
 @Service
 public class MLService {
+
+    @Autowired
+    private MlApi mlApi;
+
+    public Teams retrieveMatches(UserEntry entry) {
+        return mlApi.retrieveMatches(entry);
+    }
+
+    public Teams retrieveNewMatches(UserEntry entry) {
+        return mlApi.retrieveNewMatches(entry);
+    }
+
+    public String updateEntry(UserEntry entry) {
+        return mlApi.updateEntry(entry);
+    }
+
+    public String removeEntry(UserEntry entry) {
+        return mlApi.removeEntry(entry);
+    }
 
     public void clusterize() throws Exception {
         // Load CSV file into fullData

@@ -1,8 +1,7 @@
 package com.squad.squad_be.dto;
 
 import com.squad.squad_be.dto.enums.Role;
-
-import java.util.Arrays;
+import com.squad.squad_be.dto.ml.Teams;
 
 public class User {
     private String email;
@@ -12,13 +11,15 @@ public class User {
     private Traits traits;
     private Account account;
     private GameStats stats;
+
+    private Double winrate;
     private Role role;
-    private User[] matches;
+    private Teams matches;
 
     public User() {
     }
 
-    public User(String email, String name, Integer schedule_start, Integer schedule_end, Traits traits, Account account, GameStats stats, Role role, User[] group) {
+    public User(String email, String name, Integer schedule_start, Integer schedule_end, Traits traits, Account account, GameStats stats, Double winrate, Role role, Teams group) {
         this.email = email;
         this.name = name;
         this.schedule_start = schedule_start;
@@ -26,6 +27,7 @@ public class User {
         this.traits = traits;
         this.account = account;
         this.stats = stats;
+        this.winrate = winrate;
         this.role = role;
         this.matches = group;
     }
@@ -86,6 +88,14 @@ public class User {
         this.stats = stats;
     }
 
+    public Double getWinrate() {
+        return winrate;
+    }
+
+    public void setWinrate(Double winrate) {
+        this.winrate = winrate;
+    }
+
     public Role getRole() {
         return role;
     }
@@ -94,11 +104,11 @@ public class User {
         this.role = role;
     }
 
-    public User[] getMatches() {
+    public Teams getMatches() {
         return matches;
     }
 
-    public void setMatches(User[] matches) {
+    public void setMatches(Teams matches) {
         this.matches = matches;
     }
 
@@ -112,8 +122,9 @@ public class User {
                 ", traits=" + traits +
                 ", account=" + account +
                 ", stats=" + stats +
+                ", winrate=" + winrate +
                 ", role=" + role +
-                ", group=" + Arrays.toString(matches) +
+                ", matches=" + matches +
                 '}';
     }
 }

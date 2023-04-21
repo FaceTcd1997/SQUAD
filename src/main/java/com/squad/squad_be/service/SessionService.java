@@ -2,8 +2,6 @@ package com.squad.squad_be.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.squad.squad_be.dto.User;
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -20,7 +18,7 @@ public class SessionService {
         this.objectMapper = objectMapper;
     }
 
-    @PostConstruct
+    //@PostConstruct
     public void init() {
         map = restoreMap();
         if (map == null) {
@@ -28,7 +26,7 @@ public class SessionService {
         }
     }
 
-    @PreDestroy
+    //@PreDestroy
     public void destroy() {
         saveMap(map);
     }
